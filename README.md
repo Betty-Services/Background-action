@@ -26,3 +26,4 @@ The variables which should be send over to the subaction. Where the keys are exa
 **When using sandboxes it's recommended to store this value in a configuration(set), since this will be different per sandbox environment.*
 
 ***This value is always the same for every sandbox so can be hardcoded.*
+
