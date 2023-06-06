@@ -6,17 +6,17 @@ _Keep in mind that this still means the action duration limits still apply for t
 
 **Options:**
 
-1. Application Identifier (required)\*
+1. Application Identifier (required)*
    Is the identifier of your application url. For example when your application url is my-awesome-app.betty.app the part my-awesome-app is your application identifier.
 
-2. Applicaton ID (required)\*
+2. Applicaton ID (required)*
    The application UUID which can be found at the bottom of your application settings.
    ![Application ID](https://raw.githubusercontent.com/Betty-Services/Background-action/main/img/app_uuid.jpg)
 
 3. JWT (optional)
    The JWT token when using a non-private action which makes sure the action can be executed.
 
-4. Action ID (required)\*\*
+4. Action ID (required)**
    Can be found in the URL of the action you would like to trigger.
    ![Action ID](https://github.com/Betty-Services/Background-action/blob/main/img/action_id.jpg?raw=true)
 
