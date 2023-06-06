@@ -10,7 +10,7 @@ Is the identifier of your application url. For example when your application url
 
 2. Applicaton ID (required)*
 The application UUID which can be found at the bottom of your application settings.
-![https://raw.githubusercontent.com/Betty-Services/Background-action/main/img/app_uuid.jpg)
+![Application ID](https://raw.githubusercontent.com/Betty-Services/Background-action/main/img/app_uuid.jpg)
 
 3. JWT (optional)
 The JWT token when using a non-private action which makes sure the action can be executed.
