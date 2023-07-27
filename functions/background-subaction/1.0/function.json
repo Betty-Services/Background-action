@@ -1,49 +1,64 @@
 {
-  "description": "Execute an action",
-  "label": "Background Sub Action",
-  "category": "Misc",
+  "description": "Run an action in the background",
+  "label": "Run In Background",
+  "category": "Sub Action",
   "icon": {
-    "color": "Orange",
-    "name": "LightingIcon"
+    "color": "Grey",
+    "name": "ActionsLineIcon"
   },
   "options": [
     {
       "meta": {
-        "type": "Action",
-        "validations": { "required": true }
-      },
-      "name": "action",
-      "label": "Action",
-      "info": "The (sub) action that needs to be executed"
-    },
-    {
-      "meta": {
-        "type": "InputVariableMap",
-        "action": "action"
-      },
-      "configuration": {
-        "dependsOn": [
-          {
-            "option": "action",
-            "action": "CLEAR"
-          }
-        ]
-      },
-      "name": "input",
-      "label": "Input Variables",
-      "info": "The input variables passed to the (sub) action"
-    },
-    {
-      "meta": {
-        "type": "Output",
-        "output": {
-          "type": "Inherit",
-          "action": "action"
+        "type": "Text",
+        "validations": {
+          "required": true
         }
       },
-      "name": "result",
-      "label": "As",
-      "info": "The resulting value of the (sub) action"
+      "name": "app_identifier",
+      "label": "Application identifier",
+      "info": "The identifier (subdomain) of the Betty application",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "app_id",
+      "label": "Application ID",
+      "info": "The UUID of the Betty application",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "jwt",
+      "label": "JWT",
+      "info": "The JWT in case of executing a private action",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "action_id",
+      "label": "Action ID",
+      "info": "The UUID of the action",
+      "advanced": false
+    },
+    {
+      "info": "Select all the variables you want to have available in the template with a key",
+      "label": "Variables",
+      "meta": {
+        "type": "Map"
+      },
+      "name": "variables"
     }
   ],
   "yields": "NONE"
