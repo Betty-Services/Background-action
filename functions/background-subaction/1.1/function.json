@@ -1,0 +1,64 @@
+{
+  "description": "Running an action in the background means that the main action calling the sub action doesn't wait for the sub action to finish.",
+  "label": "Run In Background",
+  "category": "Sub Action",
+  "icon": {
+    "color": "Grey",
+    "name": "ActionsLineIcon"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "app_identifier",
+      "label": "Application identifier",
+      "info": "The identifier (subdomain) of the Betty application",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "app_uuid",
+      "label": "Application UUID",
+      "info": "The UUID of the Betty application. You can find the UUID in the application settings in My BB. Be aware that every sandbox has its own unique UUID",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "jwt",
+      "label": "JWT",
+      "info": "The JWT in case of executing a private action. It should have the following format: \"Bearer eyJhbGciOi...\"",
+      "advanced": false
+    },
+    {
+      "name": "action",
+      "label": "Action",
+      "info": "The sub action that will run in the background",
+      "meta": {
+        "type": "Action",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "input",
+      "label": "Input Variables",
+      "meta": {
+        "type": "InputVariableMap",
+        "action": "action"
+      }
+    }
+  ],
+  "yields": "NONE"
+}
